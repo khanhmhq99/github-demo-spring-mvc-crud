@@ -7,7 +7,7 @@
     <title>Manage Employee</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -48,11 +48,10 @@
                 <table class="table table-striped">
                     <thead class="thead-primary">
                         <tr>
-                            <th scope="col">Number</th>
-                            <th scope="col">First name</th>
-                            <th scope="col">Last name </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Address</th>
-                            <th scope="col">Phone</th>
                             <th scope="col">Update</th>
                             <th scope="col">Delete</th>
                         </tr>
@@ -63,7 +62,6 @@
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
-                            <td>Mark</td>
                             <td><button type="button" class="btn btn-warning btn-update">Update</button></td>
                             <td><button type="button" class="btn btn-danger">Delete</button></td>
                         </tr>
@@ -72,7 +70,6 @@
                             <td>Jacob</td>
                             <td>Thornton</td>
                             <td>@fat</td>
-                            <td>Thornton</td>
                             <td><button type="button" class="btn btn-warning btn-update">Update</button></td>
                             <td><button type="button" class="btn btn-danger">Delete</button></td>
 
@@ -82,13 +79,14 @@
                             <td>Larry</td>
                             <td>the Bird</td>
                             <td>@twitter</td>
-                            <td>Thornton</td>
                             <td><button type="button" class="btn btn-warning btn-update">Update</button></td>
                             <td><button type="button" class="btn btn-danger">Delete</button></td>
                         </tr>
                     </tbody>
                 </table>
+                
             </div>
+            <button type="button" class="btn btn-success btn-insert float-right">INSERT</button>
         </div>
     </section>
 
