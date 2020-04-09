@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity
 
 public class Employee {
-	private Integer EmployeeID;
+	private Integer id;
 	private String name;
 	private String email;
 	private String address;
@@ -18,10 +18,10 @@ public class Employee {
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getEmployeeID() {
-		return EmployeeID;
+		return id;
 	}
 	public void setEmployeeID(Integer employeeID) {
-		EmployeeID = employeeID;
+		id = employeeID;
 	}
 	public String getName() {
 		return name;

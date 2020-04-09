@@ -4,17 +4,16 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	
-	<persistence-unit name="EmployeeUnit">
 
+	<persistence-unit name="EmployeeUnit">
 		<properties>
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/employeesdb" />
+				value="jdbc:mysql://localhost:3306/employeedb" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password"
-				value="15599" />
+				value="123456" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
 		</properties>
-	</persistence-unit>	
+	</persistence-unit>
 </persistence>
