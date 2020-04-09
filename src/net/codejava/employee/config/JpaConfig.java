@@ -1,31 +1,28 @@
 package net.codejava.employee.config;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 
 @Configuration
 @EnableJpaRepositories(basePackages = {"net.codejava.employee"})
 public class JpaConfig {
-	static EntityManagerFactory factory;
-	static EntityManager createEntityManager;
+	@Bean
+	public LocalEntityManagerFactoryBean entityManagerFactory() {
+		LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
+		factoryBean.setPersistenceUnitName("EmployeeUnit");
+		return factoryBean;
+	}
 	
-	private static void begin() {
-
-		factory = Persistence.createEntityManagerFactory("EmployeeUnit");
+	@Bean
+	public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+		JpaTransactionManager transactionMng = new JpaTransactionManager();
+		transactionMng.setEntityManagerFactory(entityManagerFactory);
 		
-		createEntityManager = factory.createEntityManager();
-
-		createEntityManager.getTransaction().begin();
+		return transactionMng;
 	}
-	
-	private static void end() {
-		createEntityManager.getTransaction().commit();
-		createEntityManager.close();
-		factory.close();
-	}
-
 }
