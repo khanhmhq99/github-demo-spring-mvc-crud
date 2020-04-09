@@ -48,11 +48,10 @@
                 <table class="table table-striped">
                     <thead class="thead-primary">
                         <tr>
-                            <th scope="col">Number</th>
-                            <th scope="col">First name</th>
-                            <th scope="col">Last name </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Address</th>
-                            <th scope="col">Phone</th>
                             <th scope="col">Update</th>
                             <th scope="col">Delete</th>
                         </tr>
@@ -63,7 +62,6 @@
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
-                            <td>Mark</td>
                             <td><button type="button" class="btn btn-warning btn-update">Update</button></td>
                             <td><button type="button" class="btn btn-danger">Delete</button></td>
                         </tr>
@@ -72,7 +70,6 @@
                             <td>Jacob</td>
                             <td>Thornton</td>
                             <td>@fat</td>
-                            <td>Thornton</td>
                             <td><button type="button" class="btn btn-warning btn-update">Update</button></td>
                             <td><button type="button" class="btn btn-danger">Delete</button></td>
 
@@ -82,7 +79,6 @@
                             <td>Larry</td>
                             <td>the Bird</td>
                             <td>@twitter</td>
-                            <td>Thornton</td>
                             <td><button type="button" class="btn btn-warning btn-update">Update</button></td>
                             <td><button type="button" class="btn btn-danger">Delete</button></td>
                         </tr>
