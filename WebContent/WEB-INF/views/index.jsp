@@ -66,7 +66,7 @@
 								<td>${employee.name}</td>
 								<td>${employee.email}</td>
 								<td>${employee.address}</td>
-								<td><a href="#" class="text-warning">Update</a></td>
+								<td><a href="edit?id=${employee.employeeID}" class="text-warning">Update</a></td>
 								<td><a href="delete?id=${employee.employeeID}"
 									class="text-danger">Delete</a></td>
 							</tr>
@@ -75,7 +75,7 @@
 				</table>
 
 			</div>
-			<button type="button" class="btn btn-success btn-insert float-right">INSERT</button>
+			<a href="new" class="text-success">Create</a>
 		</div>
 	</section>
 

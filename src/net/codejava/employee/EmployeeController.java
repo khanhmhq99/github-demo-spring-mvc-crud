@@ -1,6 +1,6 @@
 package net.codejava.employee;
 
-import java.util.List;
+import java.util.List; 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +24,7 @@ public class EmployeeController {
 		return mav;
 	}
 	
+	
 	@RequestMapping("/delete")
 	public String deleteEmployee(@RequestParam int id) {
 		service.delete(id);
@@ -37,4 +38,15 @@ public class EmployeeController {
 		mav.addObject("result", result);
 		return mav;
 	}
+	@RequestMapping("/new")
+	public ModelAndView create(@RequestParam Employee entity) {
+		service.create(entity);
+		return "/create";
+	}
+	@RequestMapping("/edit")
+	public ModelAndView update(@RequestParam Employee entity) {
+		service.update(entity);
+		return "/update"; 
+	}
+	
 }
