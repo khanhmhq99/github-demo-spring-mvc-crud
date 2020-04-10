@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<title>New Employee</title>
 
-	<link rel="stylesheet" type="text/css" href="../views/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
