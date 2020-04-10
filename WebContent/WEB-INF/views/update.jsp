@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>New Customer</title>
-	<link rel="stylesheet" type="text/css" href="../views/css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="index.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
@@ -42,7 +42,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="submit" value="Save" class="btn-save"/></td>
+					<td colspan="2"><input type="submit" value="Save" class="btn-save" /></td>
 				</tr>
 			</table>
 		</form:form>
