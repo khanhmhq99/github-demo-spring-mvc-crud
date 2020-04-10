@@ -1,4 +1,4 @@
-body *{
+body * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -6,18 +6,71 @@ body *{
 .header-navigation {
   width: 100%;
   height: auto;
-  background-color: rgb(248,249,250);
+  background-color: rgb(248, 249, 250);
 }
-.body{
-    margin-top: 2em;
-    width: 100%;
+.body {
+  margin-top: 2em;
+  width: 100%;
 }
-.thead-primary{
-    background-color: rgb(0,123,255);
+.thead-primary {
+  background-color: rgb(0, 123, 255);
 }
-.thead-primary *{
-    color: white;
+.thead-primary * {
+  color: white;
 }
-.btn-insert{
+.btn-insert {
   margin-right: 15em;
+}
+.btn-create {
+  display: block;
+  background-color: rgb(40, 167, 69);
+  float: right;
+  width: 4.5em;
+  text-align: center;
+  padding: 0.5em 0.7em;
+  border-radius: 0.3em;
+  color: white !important;
+  text-decoration: none !important;
+  height: auto;
+  margin-right: 6em;
+}
+.button {
+  padding: 0.5em 1em;
+  text-decoration: none !important;
+  border-radius: 0.3em;
+  color: white !important;
+}
+.btn-update {
+  background-color: rgb(255, 191, 23);
+}
+.btn-delete {
+  background-color: rgb(220, 53, 69);
+}
+.container * {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+}
+.container {
+  background-color: rgb(208, 253, 218);
+  width: 38%;
+  height: auto;
+  margin: 5em auto;
+  padding: 2em;
+  box-shadow: 0 0 20px 1px gray;
+}
+.header {
+  padding: 1em;
+}
+.table tr {
+  padding: 1em;
+  display: block;
+}
+table * {
+  font-size: 1.05em;
+}
+.btn-save {
+  padding: 0.4em 1.2em;
+  border-radius: 0.3em;
+  background-color: rgb(40, 167, 69);
+  color: white;
 }
