@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>New Customer</title>
-	<link rel="stylesheet" href="../views/css/index.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/index.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
