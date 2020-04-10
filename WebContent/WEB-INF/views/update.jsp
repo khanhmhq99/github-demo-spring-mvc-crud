@@ -15,8 +15,8 @@
 				<tr>
 				<td>ID:</td>
 				<td>
-					${employee.id}
-					<form:hidden path="id"/>
+					${employee.employeeID}
+					<form:hidden path="employeeID"/>
 				</td>
 				</tr>
 				<tr>

@@ -1,16 +1,20 @@
 package net.codejava.employee;
 
-import java.util.List; 
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class EmployeeController {
-
+	private final String CREATE_NEW_PAGE = "create";
+	private final String UPDATE_PAGE = "update";
 	@Autowired
 	private EmployeeService service;
 	
@@ -39,14 +43,27 @@ public class EmployeeController {
 		return mav;
 	}
 	@RequestMapping("/new")
-	public ModelAndView create(@RequestParam Employee entity) {
-		service.create(entity);
-		return "/create";
+	public String newEmployeeForm(Map<String, Object> model) {
+		model.put("employee", new Employee());
+		return CREATE_NEW_PAGE;
+	}
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public String saveEmployee(@ModelAttribute("employee") Employee employee) {
+		service.save(employee);
+		
+		return "redirect:/";
 	}
 	@RequestMapping("/edit")
-	public ModelAndView update(@RequestParam Employee entity) {
-		service.update(entity);
-		return "/update"; 
+	public ModelAndView editEmployeeForm(@RequestParam int id) {
+		ModelAndView mav = new ModelAndView(UPDATE_PAGE);
+		Employee emp = service.get(id);
+		mav.addObject("employee", emp);
+		return mav;
 	}
+//	@RequestMapping("/edit")
+//	public ModelAndView update(@RequestParam Employee entity) {
+//		service.update(entity);
+//		return "/update"; 
+//	}
 	
 }

@@ -75,7 +75,7 @@
 				</table>
 
 			</div>
-			<button type="button" class="btn btn-success btn-insert float-right">INSERT</button>
+			<a href="new" class="text-success">Create</a>
 		</div>
 	</section>
 
