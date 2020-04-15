@@ -12,6 +12,43 @@
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../views/css/index.css" />
 </head>
+<style>
+#phone {
+	display: none;
+}
+#phone td {
+	width: 325px;
+}
+#tablet{
+	display: none;
+}
+#tablet td {
+	width: 600px;
+}
+@media only screen and (max-width: 325px) {
+	#phone {
+	display: block; 
+	}
+	#laptop {
+	display: none;
+	}
+	#tablet {
+	display: none;
+	}
+}
+@media only screen and (max-width: 600px) and (min-width: 325px) {
+	#phone {
+	display: none; 
+	}
+	#laptop {
+	display: none;
+	}
+	#tablet {
+	display: block;
+	}
+}
+
+</style> 
 
 <body>
 	<section class="header-navigation">
@@ -45,7 +82,7 @@
 	<section class="body">
 		<div class="container-fluid">
 			<div class="row">
-				<table class="table table-striped">
+				<table class="table table-striped" id="laptop">
 					<thead class="thead-primary">
 						<tr>
 							<th scope="col">ID</th>
@@ -65,6 +102,48 @@
 								<td>${employee.address}</td>
 								<td><a href="edit?id=${employee.employeeID}" class="text-warning">Update</a></td>
 								<td><a href="delete?id=${employee.employeeID}" class="text-danger">Delete</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+				<table class="table table-striped" id="tablet">
+					<thead class="thead-primary">
+						<tr>
+							<th scope="col">Information</th>
+							<th scope="col">Update</th>
+							<th scope="col">Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${listEmployee}" var="employee">
+							<tr>
+								<td>
+								<b>ID: </b>${employee.employeeID} <br>
+								<b>Name: </b>${employee.name} <br>
+								<b>Email: </b>${employee.email} <br>
+								<b>Address: </b>${employee.address} 
+								</td>
+								<td><a href="edit?id=${employee.employeeID}" class="text-warning">Update</a></td>
+								<td><a href="delete?id=${employee.employeeID}" class="text-danger">Delete</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+				<table class="table table-striped" id="phone">
+					<thead class="thead-primary">
+						<tr>
+							<th scope="col">Information</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${listEmployee}" var="employee">
+							<tr>
+								<td><b>ID: </b>${employee.employeeID} <br>
+								<b>Name: </b>${employee.name} <br>
+								<b>Email: </b>${employee.email} <br>
+								<b>Address: </b>${employee.address} <br>
+								<a href="edit?id=${employee.employeeID}" class="text-warning">Update</a> <br>
+								<a href="delete?id=${employee.employeeID}" class="text-danger">Delete</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
